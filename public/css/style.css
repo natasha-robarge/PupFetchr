@@ -1,0 +1,29 @@
+.loginHeader {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.mainH1 {
+  text-align: center
+}
+
+ul {
+  /*display: block;*/
+  float: left;
+  overflow: auto;
+  list-style-type: none;
+}
+
+li {
+  height: 25px;
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #aaa;
+  padding: 0 20px;
+}
