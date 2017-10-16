@@ -8,10 +8,12 @@ E4E6C3 tan
 1BE7FF  blue
 475356 grey
 */
-
+html{
+  height: 100%;
+}
 body {
-  margin: 30px;
-  background-color: #e4e6c3;
+  cursor: url(dogcursor.cur), default;
+  background: linear-gradient(to bottom, #475356, #E4E6C3, transparent), url(puppyh1.png) no-repeat right bottom;
 }
 
 .loginHeader {
@@ -24,18 +26,27 @@ body {
   font-size: 30px;
   margin-left: 10px;
   border: 2px solid gray;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.button {
+  cursor: pointer;
 }
 
 .mainH1 {
-  background: linear-gradient(90deg, #F0F1DE, #1BE7FF, transparent 70%), url(puppyh1.png) no-repeat right;
-  background-repeat: no-repeat;
+
   text-align: center;
   font-family: 'Freckle Face', cursive;
   font-size: 100px;
   color: #475356;
+  text-shadow:    -1px -1px 0 #1BE7FF , 1px -1px 0 #1BE7FF , -1px 1px 0 #1BE7FF , 1px 1px 0 #1BE7FF ;
 
 
+}
+
+.mainH1 a {
+    text-decoration: none;
+    color: inherit;
 }
 
 nav {
@@ -54,6 +65,8 @@ nav {
   margin-left: 20px;
   width: auto;
   font-size: 24px;
+  border-radius: 10px;
+
 }
 
 /*li {
@@ -74,4 +87,25 @@ p {
 div {
   background-color: #F27A4B;
   border-radius: 20px;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-top: 2rem;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signUpInfo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
 }
