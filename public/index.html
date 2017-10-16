@@ -7,15 +7,15 @@
 </head>
 <body>
   <header class="loginHeader">
-    <input class="login" type="text" name="username" placeholder="Username">
+    <input class="login" type="text" name="username" placeholder="Email Address">
     <input class="login" type="password" name="password" placeholder="Password">
-    <input class="login button" type="button" value="Login">
-    <input class="login button" type="button" value="Sign Up" onclick="window.location='signup.html'">
+    <button class="login button" type="button">Login</button>
+    <button class="login button" type="button" onclick="window.location='signup.html'">Sign Up</button>
 
   </header>
 
   <nav class="search">
-      <input type="text" id="location" class="navItem" name="location" placeholder="Austin, TX or 78701" required="required" title="Location is required.">
+      <input type="text" id="location" class="navItem" name="location" placeholder="Zip Code (required)" required="required" title="Location is required.">
 
       <select name="select" class="navItem">
         <option value="none" selected>Age</option>
@@ -32,7 +32,7 @@
       </select>
 
       <input type="text" name="breed" class ="navItem" value="" placeholder="Breed">
-      <input class="navItem button" type="button" value="Search">
+      <button class="navItem button" type="button">Search</button>
   </nav>
   <h1 class="mainH1">PupFetchr</h1>
   <div class="">
