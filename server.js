@@ -12,7 +12,7 @@ mongoose.connection.openUri(process.env.DB_CONN, function(err, conn) {
   } else {
     console.log('Successfully connected');
   }
-})
+});
 
 const app = express();
 const port = process.env.PORT || 3000;
