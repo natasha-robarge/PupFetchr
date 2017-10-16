@@ -1,13 +1,19 @@
 {
   "name": "pupfetchr",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "A dog adoption site",
   "main": "server.js",
+=======
+  "description": "Group project 1",
+  "main": "index.js",
+>>>>>>> fcf6b87072ab7a3a7a95f224394bb0e4a17929bf
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "git+https://github.com/natasha-robarge/PupFetchr.git"
   },
   "author": "\"The Stacker Slackers\"",
@@ -16,11 +22,25 @@
     "url": "https://github.com/natasha-robarge/PupFetchr/issues"
   },
   "homepage": "https://github.com/natasha-robarge/PupFetchr#readme",
+=======
+    "url": "git+https://github.com/dev-ry/PupFetchr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-ry/PupFetchr/issues"
+  },
+  "homepage": "https://github.com/dev-ry/PupFetchr#readme",
+>>>>>>> fcf6b87072ab7a3a7a95f224394bb0e4a17929bf
   "dependencies": {
     "angular": "^1.6.6",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "dotenv": "^4.0.0",
+<<<<<<< HEAD
+=======
+    "ejs": "^2.5.7",
+>>>>>>> fcf6b87072ab7a3a7a95f224394bb0e4a17929bf
     "express": "^4.16.2",
     "mocha": "^4.0.1",
     "mongoose": "^4.12.2"
