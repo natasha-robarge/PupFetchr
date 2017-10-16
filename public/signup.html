@@ -10,9 +10,9 @@
     <input class="login" type="text" name="username" placeholder="Username">
     <input class="login" type="password" name="password" placeholder="Password">
     <input class="login button" type="button" value="Login">
-    <input class="login button" type="button" value="Sign Up" onclick="window.location='signup.html'">
+    <input class="login button" type="button" value="Sign Up">
 
-  </header>
+  </header><!-- /header -->
 
   <nav class="search">
       <input type="text" id="location" class="navItem" name="location" placeholder="Austin, TX or 78701" required="required" title="Location is required.">
@@ -32,11 +32,34 @@
       </select>
 
       <input type="text" name="breed" class ="navItem" value="" placeholder="Breed">
-      <input class="navItem button" type="button" value="Search">
+      <input class="navItem button" type="submit" value="Search">
   </nav>
-  <h1 class="mainH1">PupFetchr</h1>
-  <div class="">
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <h1 class="mainH1"><a href="index.html"> PupFetchr </a></h1>
+  <div class="signUpDiv">
+    <form action="signup_submit" method="post" accept-charset="utf-8" class= "signUpForm">
+
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName">
+
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName">
+
+
+        <label for="email">Email</label>
+        <input type="email" name="email">
+
+
+        <label for="password">Password</label>
+        <input type="password" id="password1">
+
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="confirmPassword" id="confirmPassword">
+
+        <button class="button">Submit</button>
+    </form>
   </div>
 
 </body>
