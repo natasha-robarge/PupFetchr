@@ -23,6 +23,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "mocha": "^4.0.1",
-    "mongoose": "^4.12.2"
+    "mongoose": "^4.12.2",
+    "petfinder": "^0.1.1"
   }
 }
