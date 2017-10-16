@@ -12,17 +12,24 @@ mongoose.connection.openUri(process.env.DB_CONN, function(err, conn) {
   } else {
     console.log('Successfully connected');
   }
-})
+});
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-  petfinder.getBreedList('cat', function(err, breeds) {
-    console.log(breeds)
+  petfinder.findPet(78721, {}, function(err, animals) {
+    var result = [];
+    animals.forEach(function(animal) {
+      for(var prop in animal) {
+        if(animal[prop] === 'Dog') {
+          result.push({ 'animal': animal })
+        }
+      }
+    })
+    res.json(result);
   });
-  console.log('hi');
-})
+});
 
 app.listen(3000, function() {
   console.log('On port 3000');
