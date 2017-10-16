@@ -35,3 +35,20 @@ function getUser(req, res) {
     res.json(foundUser);
   })
 }
+
+function updateUser(req, res) {
+  const updateUser = db.User({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    password: req.body.password,
+    location: req.body.location,
+    savedPets: req.body.savedPets
+  });
+  db.updatedUser.findOneAndUpdate({id: _id}, function(err, updatedUser) {
+    if (err) {
+      res.sendStatus(500).send(`Error updating user, ${err}`);
+    }
+    res.json(updatedUser);
+  })
+}
