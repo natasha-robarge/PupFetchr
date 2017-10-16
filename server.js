@@ -18,20 +18,18 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-  petfinder.findPet( [78721], {}, function(err, dog) {
-    // for(var i = 0; i < animals.length; i ++){
-      res.json(dog);
-      // animals.count = 25;
-
-
+  petfinder.findPet(78721, {}, function(err, animals) {
+    var result = [];
+    animals.forEach(function(animal) {
+      for(var prop in animal) {
+        if(animal[prop] === 'Dog') {
+          result.push({ 'animal': animal })
+        }
+      }
+    })
+    res.json(result);
   });
-  console.log('hi');
-})
-
-
-
-// pets = petfinder.findPet('dog', []),
-// pets.count
+});
 
 app.listen(3000, function() {
   console.log('On port 3000');
