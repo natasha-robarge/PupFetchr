@@ -9,19 +9,30 @@
   <header class="loginHeader">
     <input class="login" type="text" name="username" placeholder="Username">
     <input class="login" type="password" name="password" placeholder="Password">
-    <input class="login" type="submit" value="Login"><br/>
-    <input class="login" type="submit" value="Sign Up">
+    <input class="login" type="submit" value="Login">
+    <input class="login" type="submit" value="Sign Up" formaction="signup.html">
 
   </header><!-- /header -->
 
   <nav class="search">
-    <ul>
-      <li><a href="" title="">one</a></li>
-      <li><a href="" title="">two</a></li>
-      <li><a href="" title="">three</a></li>
-      <li><a href="" title="">four</a></li>
-      <li><a href="" title="">five</a></li>
-    </ul>
+      <input type="text" id="location" class="navItem" name="location" placeholder="Austin, TX or 78701" required="required" title="Location is required.">
+
+      <select name="select" class="navItem">
+        <option value="none" selected>Any</option>
+        <option value="age1">Baby</option>
+        <option value="age2">Young</option>
+        <option value="age3">Adult</option>
+        <option value="age4">Senior</option>
+      </select>
+
+      <select name="select" class="navItem">
+        <option value="none" selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <input type="text" name="breed" class ="navItem" value="" placeholder="Breed">
+      <input class="navItem" type="submit" value="Search">
   </nav>
   <h1 class="mainH1">PupFetchr</h1>
   <div class="">

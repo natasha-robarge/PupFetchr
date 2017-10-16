@@ -1,29 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Freckle+Face|Reenie+Beanie');
+
+/*
+B4E33D green
+F27A4B orange
+E4E6C3 tan
+000000 black
+1BE7FF  blue
+475356 grey
+*/
+
+body {
+  margin: 30px;
+  background-color: #e4e6c3;
+}
+
 .loginHeader {
   display: flex;
   justify-content: flex-end;
 }
 
 .login {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 30px;
   margin-left: 10px;
-  border: 2px solid black;
+  border: 2px solid gray;
   border-radius: 5px;
 }
 
 .mainH1 {
-  text-align: center
+  background: linear-gradient(90deg, #F0F1DE, #1BE7FF, transparent 70%), url(puppyh1.png) no-repeat right;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: 'Freckle Face', cursive;
+  font-size: 100px;
+  color: #475356;
+
+
 }
 
-ul {
-  /*display: block;*/
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   float: left;
   overflow: auto;
   list-style-type: none;
+  margin: 20px;
+  padding: 0;
 }
 
-li {
+.navItem {
+  font-family: 'Reenie Beanie', cursive;
+  margin-left: 20px;
+  width: auto;
+  font-size: 24px;
+}
+
+/*li {
   height: 25px;
   float: left;
   margin-right: 0px;
   border-right: 1px solid #aaa;
   padding: 0 20px;
+
+}
+*/
+p {
+  font-family: 'Coming Soon', cursive;
+  padding: 30px 75px;
+  text-align: justify;
+}
+
+div {
+  background-color: #F27A4B;
+  border-radius: 20px;
 }
