@@ -24,8 +24,28 @@ UserSchema.statics.createSecure = function(email, password, callback) {
   });
 }
 
+UserSchema.methods.checkPassword = function(password, callback) {
+  bcrypt.compare(password, this.passwordHash, callback);
+}
 
+UserSchema.statics.authenticate = function(email, password, callback) {
+  this.findOne({email: email, }, function(foundUser) {
+    if(!foundUser) {
+      callback(throw new Error(`Couldn't find user with email, ${email}`));
+    } else {
+      foundUser.checkPassword(password, function(err, passwordMatch) {
+        if(err || !passwordMatch) {
+          callback(throw new Error(`Could not authenticate password, wrong password.`));
+        } else {
+          callback(null, foundUser);
+        }
+      })
+    }
+  });
+}
 
 const User = mongoose.model('User', UserSchema);
+
+User.createSecure();
 
 module.exports = User;
