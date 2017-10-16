@@ -34,6 +34,7 @@
 >>>>>>> fcf6b87072ab7a3a7a95f224394bb0e4a17929bf
   "dependencies": {
     "angular": "^1.6.6",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "dotenv": "^4.0.0",
