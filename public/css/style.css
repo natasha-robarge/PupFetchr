@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Freckle+Face|Reenie+Beanie');
+
+/*
+B4E33D green
+F27A4B orange
+E4E6C3 tan
+000000 black
+1BE7FF  blue
+475356 grey
+*/
+html{
+  height: 100%;
+}
+body {
+  cursor: url(dogcursor.cur), default;
+  background: linear-gradient(to bottom, #475356, #E4E6C3, transparent), url(puppyh1.png) no-repeat right bottom;
+}
+
+.loginHeader {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 30px;
+  margin-left: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.mainH1 {
+
+  text-align: center;
+  font-family: 'Freckle Face', cursive;
+  font-size: 100px;
+  color: #475356;
+  text-shadow:    -1px -1px 0 #1BE7FF , 1px -1px 0 #1BE7FF , -1px 1px 0 #1BE7FF , 1px 1px 0 #1BE7FF ;
+
+
+}
+
+.mainH1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  overflow: auto;
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+}
+
+.navItem {
+  font-family: 'Reenie Beanie', cursive;
+  margin-left: 20px;
+  width: auto;
+  font-size: 24px;
+  border-radius: 10px;
+
+}
+
+/*li {
+  height: 25px;
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #aaa;
+  padding: 0 20px;
+
+}
+*/
+p {
+  font-family: 'Coming Soon', cursive;
+  padding: 30px 75px;
+  text-align: justify;
+}
+
+div {
+  background-color: #F27A4B;
+  border-radius: 20px;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-top: 2rem;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signUpInfo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
