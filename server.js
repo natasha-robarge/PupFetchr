@@ -18,8 +18,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-  petfinder.findPet( [78721], {}, function(err, shelt) {
-    res.json(shelt)
+  petfinder.findPet( [78721], {}, function(err, dog) {
+    // for(var i = 0; i < animals.length; i ++){
+      res.json(dog);
+      // animals.count = 25;
+
+
   });
   console.log('hi');
 })
