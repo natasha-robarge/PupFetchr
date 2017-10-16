@@ -18,11 +18,20 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-  petfinder.getBreedList('cat', function(err, breeds) {
-    console.log(breeds)
+  petfinder.findPet( [78721], {}, function(err, dog) {
+    // for(var i = 0; i < animals.length; i ++){
+      res.json(dog);
+      // animals.count = 25;
+
+
   });
   console.log('hi');
 })
+
+
+
+// pets = petfinder.findPet('dog', []),
+// pets.count
 
 app.listen(3000, function() {
   console.log('On port 3000');
