@@ -1,4 +1,4 @@
-const db = require('../models/user');
+const db = require('../models/user-schema');
 
 //render homepage for connecting to server.js
 
@@ -42,25 +42,26 @@ function createUser(req, res){
 
     //Thoughts??
   });
+}
 
 //gets users
 function getUsers(req, res) {
   db.User.find({}, function(err, foundUsers) {
     //if there is an error
     if (err) {
-      res.sendStatus(500).send(`error getting users, ${err}`);
+      res.status(500).send(`error getting users, ${err}`);
+    } else {
+      res.json(foundUsers);
     }
-    //if there isn't an error
-    res.json(foundUsers);
   })
 }
 
 //gets a user
 function getUser(req, res) {
-  db.User.findOne({ id: _id }, function(err, foundUser) {
+  db.User.findOne({ id: req.params.id }, function(err, foundUser) {
     //if there is an error
     if (err) {
-      res.sendStatus(500).send(`Could not find user with id, error, ${err}`);
+      res.status(500).send(`Could not find user with id, error, ${err}`);
     }
     //if there isn't an error
     res.json(foundUser);
@@ -80,7 +81,7 @@ function updateUser(req, res) {
   db.updatedUser.findOneAndUpdate({id: _id}, function(err, updatedUser) {
     //if there is an error
     if (err) {
-      res.sendStatus(500).send(`Error updating user, ${err}`);
+      res.status(500).send(`Error updating user, ${err}`);
     }
     //if there isn't an error
     res.json(updatedUser);
@@ -92,7 +93,7 @@ function removeUser(req, res) {
   db.User.findOneAndRemove({id: _id}, function(err, removedUser) {
     //if there is an error
     if (err) {
-      res.sendStatus(500).send(`Error removing user, ${err}`);
+      res.status(500).send(`Error removing user, ${err}`);
     }
     //if there isn't an error
     res.json(`${removedUser}, is the user that has been removed.`);
