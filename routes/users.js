@@ -58,7 +58,7 @@ function getUsers(req, res) {
 
 //gets a user
 function getUser(req, res) {
-  db.User.findOne({ id: _id }, function(err, foundUser) {
+  db.User.findOne({ id: req.params.id }, function(err, foundUser) {
     //if there is an error
     if (err) {
       res.status(500).send(`Could not find user with id, error, ${err}`);
