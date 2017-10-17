@@ -13,7 +13,7 @@ html{
 }
 body {
   cursor: url(dogcursor.cur), default;
-  background: linear-gradient(to bottom, #475356, #E4E6C3, transparent), url(puppyh1.png) no-repeat right bottom;
+  background: linear-gradient(to bottom, #475356, #E4E6C3, transparent), url(puppyh1.png) no-repeat bottom right;
 }
 
 .loginHeader {
@@ -23,7 +23,7 @@ body {
 
 .login {
   font-family: 'Reenie Beanie', cursive;
-  font-size: 30px;
+  font-size: 20px;
   margin-left: 10px;
   border: 2px solid gray;
   border-radius: 10px;
@@ -44,9 +44,9 @@ body {
 
 }
 
-.mainH1 a {
+.mainH1, a {
     text-decoration: none;
-    color: inherit;
+
 }
 
 .createAccountH1 {
@@ -138,6 +138,16 @@ p {
 }
 
 /*additional classes home page and signup page*/
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background-color: rgba(242, 122, 75, 0.5);
+  color: #475356;
+}
 
 
 
