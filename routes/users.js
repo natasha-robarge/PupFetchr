@@ -1,5 +1,15 @@
 const db = require('../models/user');
 
+//render homepage for connecting to server.js
+
+/* function getHomePage(req, res) {
+  //NOTE: This won't work! The reason why is because it will load automatically as an html file.
+  //So this isn't valid until we change our format to ejs. Take a look at w05/d02, and
+  //give me a second opinion.
+  //                            - Love, Nat/Nata
+  res.render('index')
+}
+*/
 //creates a user
 function createUser(req, res){
   const newUser = db.User({
@@ -19,7 +29,7 @@ function createUser(req, res){
       res.status(201).json(data);
     }
 
-    //I was looking at the w05/d03 starter code on the authentication and found this.
+    //I was looking at the w05/d02 starter code on the authentication and found this.
     /*
     User.createSecure(req.body.email, req.body.password, function(err, savedUser) {
       if (err) {
