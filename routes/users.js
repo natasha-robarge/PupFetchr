@@ -1,5 +1,6 @@
 const db = require('../models/user');
 
+//creates a user
 function createUser(req, res){
   const newUser = db.User({
     firstName: req.body.firstName,
@@ -18,8 +19,21 @@ function createUser(req, res){
       res.status(201).json(data);
     }
 
+    //I was looking at the w05/d03 starter code on the authentication and found this.
+    /*
+    User.createSecure(req.body.email, req.body.password, function(err, savedUser) {
+      if (err) {
+        res.status(500).send(`Something went wrong ${err}`);
+      } else {
+      res.json(savedUser);
+      }
+    });
+    */
+
+    //Thoughts??
   });
 
+//gets users
 function getUsers(req, res) {
   db.User.find({}, function(err, foundUsers) {
     //if there is an error
@@ -31,6 +45,7 @@ function getUsers(req, res) {
   })
 }
 
+//gets a user
 function getUser(req, res) {
   db.User.findOne({ id: _id }, function(err, foundUser) {
     //if there is an error
@@ -42,6 +57,7 @@ function getUser(req, res) {
   })
 }
 
+//Updates a user
 function updateUser(req, res) {
   const updateUser = db.User({
     firstName: req.body.firstName,
@@ -61,6 +77,7 @@ function updateUser(req, res) {
   })
 }
 
+//Removes a user
 function removeUser(req, res) {
   db.User.findOneAndRemove({id: _id}, function(err, removedUser) {
     //if there is an error
@@ -70,4 +87,25 @@ function removeUser(req, res) {
     //if there isn't an error
     res.json(`${removedUser}, is the user that has been removed.`);
   })
+}
+
+//Authenticates User at Login
+function newLoginSession(req, res) {
+  User.authenticate(req.body.email, req.body.password, function(err, user) {
+    if (err) {
+      res.status(407).send(`Error processing login: ${err.message}`);
+    } else {
+      res.json(user);
+    }
+  });
+}
+
+
+module.exports = {
+  createUser: createUser,
+  getUser: getUser,
+  getUsers: getUsers,
+  updateUser: updateUser,
+  removeUser: removeUser,
+  newLoginSession: newLoginSession
 }

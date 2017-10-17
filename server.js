@@ -30,6 +30,13 @@ app.use('/', express.static('public'))
 
 
 //App routes
+const userRoutes = require('../routes/users');
+app.get('/', userRoutes.getUser);
+app.get('/', userRoutes.getUsers);
+app.post('/', userRoutes.createUser);
+app.put('/', userRoutes.updateUser);
+app.delete('/', userRoutes.removeUser);
+app.get('/', userRoutes.newLoginSession);
 
 
 app.get('/', function(req, res) {
