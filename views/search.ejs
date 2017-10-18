@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Search Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
+</head>
+<body>
+  <header class="loggedInHeader">
+    <a href="index.html" class="logoTopLeft"> PupFetchr </a>
+
+
+  </header>
+   <nav class="search">
+      <input type="text" id="location" class="navItem" name="location" placeholder="Zip Code (required)" required="required" title="Location is required.">
+
+      <select name="select" class="navItem">
+        <option value="none" selected>Age</option>
+        <option value="age1">Baby</option>
+        <option value="age2">Young</option>
+        <option value="age3">Adult</option>
+        <option value="age4">Senior</option>
+      </select>
+
+      <select name="select" class="navItem">
+        <option value="none" selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <input type="text" name="breed" class ="navItem" value="" placeholder="Breed">
+      <button onclick="window.location='/search'" class="navItem button searchButton" type="button">Search</button>
+  </nav>
+  <div class='appendDiv'>
+    <% for(var i = 0; i < animals.length; i++) { %>
+        <h3>
+          <%= animals[i].animal.name %>
+        </h3>
+        <h5>
+          Gender: <%= animals[i].animal.sex %>
+        </h5>
+        <h5>
+          Age: <%= animals[i].animal.age %>
+        </h5>
+        <h5>
+          Contact: <%= animals[i].animal.contact.email %>
+        </h5>
+        <p>
+          <%= animals[i].animal.description %>
+          <img src='<%= photos[i] %>' class='photos'>
+        </p>
+    <% } %>
+  </div>
+  <h1 class="mainH1">Search</h1>
+  <div class="postPets"></div>
+  <footer>
+    Created by The Slacker Stackers.  All rights reserved &#169; 2017
+  </footer>
+
+  <script type="text/javascript" src="../server.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+
+</body>
+</html>

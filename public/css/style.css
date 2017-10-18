@@ -148,9 +148,10 @@ footer {
   background-color: rgba(242, 122, 75, 0.5);
   color: #475356;
 }
-
+.photos {
+  width: 400px;
+  height: 350px;
+}
 
 
 /*start of search and cart pages*/
-
-
