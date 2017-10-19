@@ -24,15 +24,17 @@ app.use('/', express.static('public'));
 
 //App routes
 const userRoutes = require('./routes/users');
-// const dogRoutes = require('./routes/dogs');
+const dogRoutes = require('./routes/dogs');
 
+
+app.get('/dogs', dogRoutes.getDogs);
 app.get('/', userRoutes.getUsers);
 app.get('/:id', userRoutes.getUser);
 app.post('/', userRoutes.createUser);
 app.put('/', userRoutes.updateUser);
 app.delete('/', userRoutes.removeUser);
 // app.get('/', userRoutes.newLoginSession);
-// app.get('/dogs', dogRoutes.getDogs);
+
 
 
 //App Start
