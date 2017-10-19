@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PupFetchr</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+
+    <header class="loginHeader">
+      <input class="login" type="text" name="username" placeholder="Email Address">
+      <!-- <input class="login" type="password" name="password" placeholder="Password"> -->
+      <button class="login button" type="button">Login</button>
+      <a href="/signup"><button class="login button" type="button">Sign Up</button></a>
+    </header>
+
+    <nav class="search">
+        <input type="text" id="location" class="navItem" name="location" placeholder="Zip Code (required)" required="required" title="Location is required.">
+
+        <select name="select" class="navItem">
+          <option value="none" selected>Age</option>
+          <option value="age1">Baby</option>
+          <option value="age2">Young</option>
+          <option value="age3">Adult</option>
+          <option value="age4">Senior</option>
+        </select>
+
+        <select name="select" class="navItem" id="gender-choice">
+          <option value="none" selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <input type="text" name="breed" class ="navItem" value="" placeholder="Breed">
+        <button class="navItem button searchButton" type="button" onclick="location.href='/search/'+ $('#location').val()">Search</button>
+    </nav>
+    <h1 class="mainH1">PupFetchr</h1>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <footer>
+      Created by The Slacker Stackers.  All rights reserved &#169; 2017
+    </footer>
+
+  </body>
+</html>
