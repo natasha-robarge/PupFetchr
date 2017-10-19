@@ -7,7 +7,7 @@
 </head>
 <body>
   <header class="loggedInHeader">
-    <a href="/home" class="logoTopLeft"> PupFetchr </a>
+    <a href="/" class="logoTopLeft"> PupFetchr </a>
 
 
   </header><!-- /header -->
@@ -30,31 +30,31 @@
       </select>
 
       <input type="text" name="breed" class ="navItem" value="" placeholder="Breed">
-      <button onclick="window.location='/search'" class="navItem button searchButton" type="button">Search</button>
+      <button class="navItem button searchButton" type="button" onclick="location.href='/search/'+ $('#location').val()">Search</button>
   </nav>
   <h1 class="createAccountH1">Create Account</h1>
   <div class="signUpDiv">
-    <form action="/home" method="post" accept-charset="utf-8" class= "signUpForm">
+    <form action="/" method="post" accept-charset="utf-8" class= "signUpForm">
 
 
         <!-- <label for="firstName">First Name</label> -->
-        <input type="text" id="firstName" name="firstName" placeholder="First Name" class= "formInput">
+        <!-- <input type="text" id="firstName" name="firstName" placeholder="First Name" class= "formInput"> -->
 
 
         <!-- <label for="lastName">Last Name</label> -->
-        <input type="text" id="lastName" name="lastName" placeholder="Last Name" class= "formInput">
+        <!-- <input type="text" id="lastName" name="lastName" placeholder="Last Name" class= "formInput"> -->
 
 
         <!-- <label for="email">Email</label> -->
         <input type="email" name="email" placeholder="Email" class= "formInput">
 
 
-        <!-- <label for="password">Password</label> -->
-        <input type="password" id="password1" placeholder="Password" class= "formInput">
+        <!-- <label for="password">Password</label>
+           <input type="password" id="password1" placeholder="Password" class= "formInput">
 
 
-        <!-- <label for="confirmPassword">Confirm Password</label> -->
-        <input type="password" id="confirmPassword" placeholder="Confirm Password" class= "formInput">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" class= "formInput"> -->
 
         <button class="button formInput">Sign up!</button>
     </form>
@@ -63,7 +63,6 @@
     Created by The Slacker Stackers.  All rights reserved &#169; 2017
   </footer>
   <script type="text/javascript" src="./js/main.js"></script>
-  <script type="text/javascript" src="../server.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>

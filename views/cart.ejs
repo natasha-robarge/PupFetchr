@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="loggedInHeader">
-    <a href="/home" class="logoTopLeft"> PupFetchr </a>
+    <a href="/" class="logoTopLeft"> PupFetchr </a>
 
 
   </header>
@@ -30,14 +30,14 @@
       </select>
 
       <input type="text" name="breed" class ="navItem" value="" placeholder="Breed">
-      <button onclick="window.location='/search'" class="navItem button" type="button">Search</button>
+      <button class="navItem button" type="button" onclick="location.href='/search/'+ $('#location').val()">Search</button>
   </nav>
   <h1 class="mainH1">Cart</h1>
   <footer>
     Created by The Slacker Stackers.  All rights reserved &#169; 2017
   </footer>
+
   <script type="text/javascript" src="./js/main.js"></script>
-  <script type="text/javascript" src="../server.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
