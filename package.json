@@ -24,6 +24,7 @@
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "mocha": "^4.0.1",
+    "mongoose": "^4.12.3",
     "petfinder": "^0.1.1"
   }
 }

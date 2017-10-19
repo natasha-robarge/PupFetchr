@@ -19,7 +19,7 @@ app.get('/', homeRoute.getHomePage);
 
 app.get('/signup', homeRoute.getSignUpPage);
 
-app.post('/signup', )
+//app.post('/signup', )
 
 
 

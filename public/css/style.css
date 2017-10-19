@@ -157,8 +157,8 @@ footer {
 .appendDiv {
   max-width: 60%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   /*justify-content: space-around;*/
   margin: auto;
 }
