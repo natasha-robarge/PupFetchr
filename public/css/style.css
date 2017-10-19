@@ -14,6 +14,7 @@ html{
 body {
   cursor: url(dogcursor.cur), default;
   background: linear-gradient(to bottom, #475356, #E4E6C3, transparent), url(puppyh1.png) no-repeat bottom right;
+  background-attachment: fixed;
 }
 
 .loginHeader {
@@ -149,9 +150,41 @@ footer {
   color: #475356;
 }
 .photos {
-  width: 400px;
-  height: 350px;
+  width: 100px;
+  height: 88px;
 }
 
+.appendDiv {
+  max-width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-around;*/
+  margin: auto;
+}
 
+.detail {
+  display: inline-block;
+
+}
+
+.photo {
+  float: left;
+}
+
+.detailcontainer {
+  background-color: rgba(242, 122, 75, 0.5);
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Coming Soon', cursive;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 20px;
+  font-family: 'Coming Soon', cursive;
+}
 /*start of search and cart pages*/
